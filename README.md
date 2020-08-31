@@ -21,7 +21,7 @@ Oh I like Blue too!
 Note that in the above example, the user inputted the name "Nathan" and then "Blue". Your program should work
 for any name that the user types in. 
 
- 
+  
 
 Add code to [MyMain.java](src/main/java/MyClass.java) to do the desired thing.
 
