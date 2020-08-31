@@ -38,7 +38,7 @@ public class MyTests {
     }
 
     @Test
-    public void testStdoutGreeting() throws IOException {
+    public void testAsksForName() throws IOException {
         try (ByteArrayOutputStream bos = new ByteArrayOutputStream()) {
             PrintStream originalOut = System.out;
             System.setOut(new PrintStream(bos));
@@ -54,18 +54,8 @@ public class MyTests {
 
             // Test 1: User should be prompted for their name (may want to remove this test case)
             String output = bos.toString().trim();
-            assertTrueString(output.contains("What is your name?"), "What is your name? ...", output, "Your program should prompt the user with the following message, \"What is your name?\"");
+            assertTrueString(output.contains("What is your name?"), "What is your name? ...", output.substring(0, 18), "The first 18 characters of your output should be: \"What is your name?\"");
 
-            // Test 2: Output should include "Hello"
-            output = output.contains("What is your name?") ? output.substring(18).trim() : output;
-            assertTrueString(output.contains("Hello"), "Hello ... ", output, "Your program should print out \"Hello ...\" as part of the greeting");
-
-            // Test 3: When given the input "Riley", the program should print out "Hello, Riley!"
-            assertMultipleEquals(new String[] {"Hello, Riley!", "Hello Riley!"}, output, "Your program should print out \"Hello, Riley\" when the name Riley is given as input");
-            // Boolean bool = str.equals("Hello world!") || str.equals("Hello, world!");
-            // assertTrue(bool, "Output should be \"Hello world!\" or \"Hello, world!\"");
-
-            // undo the binding in System
             System.setOut(originalOut);
         }
     }
