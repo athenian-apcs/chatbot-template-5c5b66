@@ -1,4 +1,4 @@
-# Chatbot Assignment Template
+# Chatbot Assignment
 
 You will be writing a Chatbot program that uses Scanner to ask the user several questions
 about themselves, and then makes a response to the user based on that question. 
