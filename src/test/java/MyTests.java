@@ -53,8 +53,8 @@ public class MyTests {
             // Test 1: Output is not empty
             assertTrue(output.length() > 0, "The output is empty! You need to print some stuff!");
 
-            // Test 2: Output is at least 30 characters
-            assertTrue(output.length() > 30, "The output is too short. Add some more questions for your ChatBot.");
+            // Test 2: Output is at least 50 characters
+            assertTrue(output.length() > 50, "The output is too short. Add some more questions for your ChatBot.");
 
             System.setOut(originalOut);
         }
