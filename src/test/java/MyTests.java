@@ -46,15 +46,15 @@ public class MyTests {
             FileInputStream is = new FileInputStream(new File("src/test/java/Names.txt"));
             System.setIn(is);
 
-            
-
-            
             // Call main()
             MyMain.main(null);
-
-            // Test 1: User should be prompted for their name (may want to remove this test case)
             String output = bos.toString().trim();
-            assertTrueString(output.contains("What is your name?"), "What is your name? ...", output.substring(0, 18), "The first 18 characters of your output should be: \"What is your name?\"");
+
+            // Test 1: Output is not empty
+            assertTrue(output.length() > 0, "The output is empty! You need to print some stuff!");
+
+            // Test 2: Output is at least 30 characters
+            assertTrue(output.length() > 30, "The output is too short. Add some more questions for your ChatBot.");
 
             System.setOut(originalOut);
         }

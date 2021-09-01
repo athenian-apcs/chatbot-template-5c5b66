@@ -24,7 +24,7 @@ for any name that the user types in.
 <br />
 <br />
 
-Add code to [MyMain.java](src/main/java/MyClass.java) to do the desired thing.
+Add code to [MyMain.java](src/main/java/MyMain.java) to do the desired thing.
 
 ## Run your code with:
 ```shell script
